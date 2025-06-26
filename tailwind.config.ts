@@ -9,6 +9,9 @@ const config: Config = {
   darkMode: 'class',
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)', 'sans-serif'],
+      },
       colors: {
         background: '#FFFFFF',
         'background-dark': '#090D1F',
@@ -20,6 +23,12 @@ const config: Config = {
         'secondary-dark': '#C0C5D0',
 
         title: '#6941C6',
+      },
+      screens: {
+        'sm': '390px',
+        'md': '819px',
+        'lg': '834px',
+        'xl': '1440px',
       },
     },
   },
