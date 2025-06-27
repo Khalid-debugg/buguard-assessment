@@ -1,6 +1,6 @@
 export const Sun = () => (
   <svg
-    className="text-primary-dark "
+    className="translate-x-2 text-primary-dark"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -13,12 +13,34 @@ export const Sun = () => (
 
 export const Moon = () => (
   <svg
-    className="text-primary translate-x-7"
+    className="translate-x-16 text-primary"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
     viewBox="0 0 24 24"
   >
     <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+  </svg>
+)
+
+export const Arrow = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    className={
+      'text-primary hover:cursor-pointer dark:text-primary-dark ' +
+      (props.className || '')
+    }
+    width="12"
+    height="12"
+    viewBox="0 0 12 12"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M1 11L11 1M11 1H1M11 1V11"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
   </svg>
 )

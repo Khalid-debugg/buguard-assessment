@@ -18,7 +18,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className="relative bg-background p-1 sm:p-4 md:px-[112px] md:py-[30px] dark:bg-background-dark">
+    <nav className="relative bg-background p-5 md:px-[112px] md:py-[30px] dark:bg-background-dark">
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-semibold text-primary dark:text-primary-dark">
           Khalid Sherif
@@ -26,25 +26,25 @@ const Navbar = () => {
         <BurgerMenu toggleMenu={toggleMenu} />
         <div className="hidden items-center gap-4 sm:flex">
           <Link
-            href="/"
+            href="/posts"
             className="cursor-pointer rounded-md p-2 text-primary transition-all duration-300 ease-in-out hover:bg-slate-100 hover:text-primary dark:text-primary-dark"
           >
             Blog
           </Link>
           <Link
-            href="/"
+            href="/posts"
             className="cursor-pointer rounded-md p-2 text-primary transition-all duration-300 ease-in-out hover:bg-slate-100 hover:text-primary dark:text-primary-dark"
           >
             Projects
           </Link>
           <Link
-            href="/"
+            href="/posts"
             className="cursor-pointer rounded-md p-2 text-primary transition-all duration-300 ease-in-out hover:bg-slate-100 hover:text-primary dark:text-primary-dark"
           >
             About
           </Link>
           <Link
-            href="/"
+            href="/posts"
             className="cursor-pointer rounded-md p-2 text-primary transition-all duration-300 ease-in-out hover:bg-slate-100 hover:text-primary dark:text-primary-dark"
           >
             Newsletter

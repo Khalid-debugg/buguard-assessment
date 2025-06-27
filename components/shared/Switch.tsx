@@ -15,16 +15,11 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="relative w-14 h-6 rounded-full bg-primary dark:bg-primary-dark transition-colors duration-300 flex justify-between items-center px-1"
+      className="relative flex h-10 w-24 items-center justify-between rounded-full bg-primary transition-colors duration-300 dark:bg-primary-dark"
     >
-      <div className={`w-5 h-5`}>
-          {isDark ? <Moon  /> : <Sun  />}
-      </div>
+      <div className={`h-6 w-6`}>{isDark ? <Moon /> : <Sun />}</div>
       <div
-        className={`w-4 h-4 rounded-full transition-all duration-300 transform
-          ${isDark ? '-translate-x-7' : '-translate-x-1'}
-          bg-background dark:bg-background-dark
-        `}
+        className={`h-6 w-6 transform rounded-full transition-all duration-300 ${isDark ? '-translate-x-16' : '-translate-x-2'} bg-background dark:bg-background-dark`}
       />
     </button>
   )
