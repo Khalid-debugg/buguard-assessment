@@ -4,13 +4,13 @@ import { Arrow } from '@/components/ui/Icons'
 
 const RecentBlogPosts = () => {
   return (
-    <div className="flex w-full flex-col gap-8 py-8">
+    <div className="flex w-full flex-col gap-8 px-4 py-8 sm:px-0">
       <p className="text-xl font-semibold md:text-2xl">Recent blog posts</p>
       <div className="flex flex-col gap-8 md:flex-row">
         <div className="flex flex-1 flex-col gap-4 md:gap-6">
           <div className="relative aspect-[16/6] w-full md:aspect-[592/228]">
             <Image
-              src="/post-images/ux-review-presentation.jpg"
+              src="/post-images/recent-blog-posts/ux-review-presentation.jpg"
               alt="multiple chairs"
               fill
               priority
@@ -30,7 +30,7 @@ const RecentBlogPosts = () => {
             How do you create compelling presentations that wow your colleagues
             and impress your managers?
           </p>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <Badge color="purple" title="Design" />
             <Badge color="blue" title="Research" />
             <Badge color="red" title="Presentation" />
@@ -40,7 +40,7 @@ const RecentBlogPosts = () => {
           <div className="flex flex-col gap-4 sm:flex-row md:gap-6">
             <div className="relative aspect-[16/10] w-full min-w-36 flex-1 sm:w-1/2 md:aspect-[320/200]">
               <Image
-                src="/post-images/migrating-to-linear.jpg"
+                src="/post-images/recent-blog-posts/migrating-to-linear.jpg"
                 alt="meeting"
                 fill
                 className="object-cover"
@@ -57,7 +57,7 @@ const RecentBlogPosts = () => {
                 Linear helps streamline software projects, sprints, tasks, and
                 bug tracking. Here&apos;s how to get...
               </p>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 <Badge color="blue" title="Design" />
                 <Badge color="red" title="Research" />
               </div>
@@ -66,7 +66,7 @@ const RecentBlogPosts = () => {
           <div className="flex flex-col gap-4 sm:flex-row md:gap-6">
             <div className="relative aspect-[16/10] w-full min-w-36 flex-1 sm:w-1/2 md:aspect-[320/200]">
               <Image
-                src="/post-images/api-stack.jpg"
+                src="/post-images/recent-blog-posts/api-stack.jpg"
                 alt="computer setup"
                 fill
                 className="object-cover"
@@ -83,7 +83,7 @@ const RecentBlogPosts = () => {
                 The rise of RESTful APIs has been met by a rise in tools for
                 creating, testing, and manag...
               </p>
-              <div className="flex gap-2">
+              <div className="flex flex-wrap gap-2">
                 <Badge color="green" title="Design" />
                 <Badge color="red" title="Research" />
               </div>
@@ -94,7 +94,7 @@ const RecentBlogPosts = () => {
       <div className="mt-8 flex w-full flex-col gap-6 md:flex-row md:gap-8">
         <div className="relative aspect-[592/246] w-full min-w-36 flex-1 md:w-1/2">
           <Image
-            src="/post-images/grid-system.jpg"
+            src="/post-images/recent-blog-posts/grid-system.jpg"
             alt="landing page"
             fill
             className="object-cover object-top"
@@ -118,7 +118,7 @@ const RecentBlogPosts = () => {
             across a website, and can help to make the layout more visually
             appealing and easier to navigate.
           </p>
-          <div className="flex gap-2">
+          <div className="flex flex-wrap gap-2">
             <Badge color="purple" title="Design" />
             <Badge color="red" title="Interface" />
           </div>

@@ -1,3 +1,4 @@
+import AllBlogPosts from './components/AllBlogPosts'
 import RecentBlogPosts from './components/RecentBlogPosts'
 
 const AllPostsPage = () => {
@@ -7,6 +8,7 @@ const AllPostsPage = () => {
         THE BLOG
       </h1>
       <RecentBlogPosts />
+      <AllBlogPosts />
     </div>
   )
 }

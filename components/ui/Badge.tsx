@@ -1,7 +1,4 @@
-interface BadgeProps {
-  color: string
-  title: string
-}
+import type { Badge } from '@/types'
 
 const colorMap: Record<string, { text: string; bg: string }> = {
   blue: { text: 'text-[#3538CD]', bg: 'bg-[#EEF4FF]' },
@@ -10,7 +7,7 @@ const colorMap: Record<string, { text: string; bg: string }> = {
   purple: { text: 'text-[#6941C6]', bg: 'bg-[#F9F5FF]' },
 }
 
-const Badge = ({ color, title }: BadgeProps) => {
+const Badge = ({ color, title }: Badge) => {
   const colorClasses = colorMap[color] || {
     text: 'text-gray-900',
     bg: 'bg-gray-200',

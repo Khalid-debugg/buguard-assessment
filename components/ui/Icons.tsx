@@ -26,11 +26,9 @@ export const Moon = () => (
 export const Arrow = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     className={
-      'text-primary hover:cursor-pointer dark:text-primary-dark ' +
+      'h-3 w-3 text-primary hover:cursor-pointer dark:text-primary-dark' +
       (props.className || '')
     }
-    width="12"
-    height="12"
     viewBox="0 0 12 12"
     xmlns="http://www.w3.org/2000/svg"
     {...props}
