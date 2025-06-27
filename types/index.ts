@@ -14,3 +14,10 @@ export interface Badge {
   color: string
   title: string
 }
+export interface MobileMenuProps {
+  isOpen: boolean
+  onClose: () => void
+}
+export interface BurgerMenuProps {
+  toggleMenu: () => void
+}

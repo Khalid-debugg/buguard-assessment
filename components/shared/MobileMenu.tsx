@@ -2,57 +2,42 @@
 
 import Link from 'next/link'
 import DarkModeToggle from './Switch'
-
-interface MobileMenuProps {
-  isOpen: boolean
-  onClose: () => void
-}
+import { MobileMenuProps } from '@/types'
 
 const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   return (
-    <div 
-      className={`fixed inset-0 z-50 bg-background dark:bg-[#121212] transition-height duration-700 ease-in-out ${
-        isOpen ? 'opacity-100 h-screen' : 'opacity-0 h-0 pointer-events-none'
+    <div
+      className={`transition-height fixed inset-0 z-50 bg-background duration-700 ease-in-out dark:bg-[#121212] ${
+        isOpen ? 'h-screen opacity-100' : 'pointer-events-none h-0 opacity-0'
       }`}
     >
-      <div className="flex flex-col h-full">
-        <div className="flex-1 flex flex-col gap-4 items-center justify-center space-y-8 px-4">
-          <p className='text-primary dark:text-primary-dark font-semibold'>Khalid Sherif</p>
-          <Link
-            href="/"
-            className="text-primary dark:text-primary-dark"
-          >
+      <div className="flex h-full flex-col">
+        <div className="flex flex-1 flex-col items-center justify-center gap-4 space-y-8 px-4">
+          <p className="font-semibold text-primary dark:text-primary-dark">
+            Khalid Sherif
+          </p>
+          <Link href="/" className="text-primary dark:text-primary-dark">
             Blog
           </Link>
-          <Link
-            href="/"
-            className="text-primary dark:text-primary-dark "
-          >
+          <Link href="/" className="text-primary dark:text-primary-dark">
             Projects
           </Link>
-          <Link
-            href="/"
-            className="text-primary dark:text-primary-dark"
-          >         
-          
+          <Link href="/" className="text-primary dark:text-primary-dark">
             About
-            </Link>
-          <Link
-            href="/"
-            className="text-primary dark:text-primary-dark"
-          >           
+          </Link>
+          <Link href="/" className="text-primary dark:text-primary-dark">
             Newsletter
           </Link>
           <DarkModeToggle />
         </div>
         <div className="flex justify-center p-8">
-        <button
+          <button
             onClick={onClose}
-            className="p-2 hover:bg-gray-800 rounded-md transition-colors"
+            className="rounded-md p-2 transition-colors hover:bg-gray-800"
             aria-label="Close menu"
           >
             <svg
-              className="w-6 h-6 text-primary dark:text-primary-dark"
+              className="h-6 w-6 text-primary dark:text-primary-dark"
               fill="none"
               stroke="currentColor"
               strokeWidth="2"
@@ -71,4 +56,4 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
   )
 }
 
-export default MobileMenu 
+export default MobileMenu
