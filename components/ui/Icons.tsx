@@ -1,6 +1,6 @@
 export const Sun = () => (
   <svg
-    className=" text-primary-dark "
+    className="text-primary-dark "
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
@@ -13,7 +13,7 @@ export const Sun = () => (
 
 export const Moon = () => (
   <svg
-    className="dark:text-primary translate-x-7"
+    className="text-primary translate-x-7"
     fill="none"
     stroke="currentColor"
     strokeWidth="2"
