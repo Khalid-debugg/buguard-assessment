@@ -26,3 +26,8 @@ export interface UseGetAllPostsResult {
   isError: boolean
   isPending: boolean
 }
+export interface ThemeContextType {
+  theme: 'light' | 'dark'
+  toggleTheme: () => void
+  mounted: boolean
+}

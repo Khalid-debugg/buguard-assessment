@@ -25,7 +25,7 @@ const config: Config = {
         title: '#6941C6',
       },
       screens: {
-        sm: '390px',
+        sm: '425px',
         md: '819px',
         lg: '1440px',
       },

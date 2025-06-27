@@ -1,15 +1,20 @@
 'use client'
 
-import { useState } from 'react'
 import { Moon, Sun } from '@/components/ui/Icons'
+import { useThemeContext } from '@/hooks/ThemeContext'
 
 export default function DarkModeToggle() {
-  const [isDark, setIsDark] = useState(false)
-
-  const toggleTheme = () => {
-    const root = document.documentElement
-    root.classList.toggle('dark')
-    setIsDark(!isDark)
+  const { theme, toggleTheme, mounted } = useThemeContext()
+  const isDark = theme === 'dark'
+  if (!mounted) {
+    return (
+      <button className="relative flex h-10 w-24 items-center justify-between rounded-full bg-primary transition-colors duration-300 dark:bg-primary-dark">
+        <div className="h-6 w-6">
+          <Sun />
+        </div>
+        <div className="h-6 w-6 -translate-x-2 transform rounded-full bg-background transition-all duration-300 dark:bg-background-dark" />
+      </button>
+    )
   }
 
   return (
