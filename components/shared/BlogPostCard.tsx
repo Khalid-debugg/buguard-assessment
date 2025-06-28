@@ -7,12 +7,12 @@ import Link from 'next/link'
 const BlogPostCard = ({ post }: { post: Post }) => {
   return (
     <div className="overflow- flex h-[476px] w-[384px] flex-col gap-4">
-      <div className="relative aspect-[384/240] w-full">
+      <div className="relative aspect-[384/240] w-full overflow-hidden">
         <Image
           src={post.imageUrl}
           alt={post.title}
           fill
-          className="object-cover object-top"
+          className="object-cover object-top hover:scale-105 transition-all duration-300 ease-in-out"
         />
       </div>
 
@@ -22,7 +22,7 @@ const BlogPostCard = ({ post }: { post: Post }) => {
 
       <Link
         href={`/posts/${post.id}`}
-        className="flex items-start justify-between"
+        className="flex items-start justify-between hover:text-title"
       >
         <p className="line-clamp-2 text-lg font-semibold md:text-2xl">
           {post.title}
