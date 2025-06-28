@@ -1,7 +1,7 @@
 'use client'
 
 import { Moon, Sun } from '@/components/ui/Icons'
-import { useThemeContext } from '@/hooks/ThemeContext'
+import { useThemeContext } from '@/context/ThemeContext'
 
 export default function DarkModeToggle() {
   const { theme, toggleTheme, mounted } = useThemeContext()

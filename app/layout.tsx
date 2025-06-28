@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 import { ReactNode, StrictMode } from 'react'
 import { Inter } from 'next/font/google'
 import Navbar from '@/components/shared/Navbar'
-import { ThemeProvider } from '@/hooks/ThemeContext'
+import { ThemeProvider } from '@/context/ThemeContext'
 
 const inter = Inter({
   subsets: ['latin'],

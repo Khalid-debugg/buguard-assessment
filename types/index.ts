@@ -26,6 +26,11 @@ export interface UseGetAllPostsResult {
   isError: boolean
   isPending: boolean
 }
+export interface UseGetPostByIdResult {
+  data: FetchedPost | null
+  isError: boolean
+  isPending: boolean
+}
 export interface ThemeContextType {
   theme: 'light' | 'dark'
   toggleTheme: () => void
