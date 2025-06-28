@@ -11,7 +11,7 @@ const inter = Inter({
   weight: ['400', '500', '600', '700'],
 })
 export const metadata: Metadata = {
-  title: 'My App',
+  title: 'The Blog',
   description: 'A Next.js App using Tailwind',
 }
 
