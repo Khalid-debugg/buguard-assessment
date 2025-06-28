@@ -29,9 +29,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    google: 'your-google-verification-code',
-  },
   alternates: {
     canonical: 'https://buguard-assessment-d2zb2hxhf-khalids-projects-359b9524.vercel.app',
   },
@@ -65,6 +62,10 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={inter.variable}>
+      <head>
+        <link rel="preconnect" href="https://jsonplaceholder.typicode.com" />
+        <link rel="dns-prefetch" href="https://jsonplaceholder.typicode.com" />
+      </head>
       <body className="font-sans">
         <StrictMode>
           <ThemeProvider>

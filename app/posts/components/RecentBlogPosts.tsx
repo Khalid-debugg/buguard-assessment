@@ -44,6 +44,7 @@ const RecentBlogPosts = () => {
                 alt="meeting"
                 fill
                 className="object-cover"
+                priority
               />
             </div>
             <div className="flex flex-1 flex-col gap-4 md:gap-6">
@@ -70,6 +71,7 @@ const RecentBlogPosts = () => {
                 alt="computer setup"
                 fill
                 className="object-cover"
+                priority
               />
             </div>
             <div className="flex flex-1 flex-col gap-4 md:gap-6">
