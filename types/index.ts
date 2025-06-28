@@ -21,7 +21,7 @@ export interface MobileMenuProps {
 export interface BurgerMenuProps {
   toggleMenu: () => void
 }
-export interface UseGetAllPostsResult {
+export interface UseGetPostsResult {
   data: Post[] | null
   isError: boolean
   isPending: boolean

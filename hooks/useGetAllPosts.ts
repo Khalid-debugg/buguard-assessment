@@ -1,9 +1,9 @@
-import { Post, UseGetAllPostsResult } from '@/types'
+import { Post, UseGetPostsResult } from '@/types'
 import { useEffect, useState } from 'react'
 
 const API_URL = 'https://jsonplaceholder.typicode.com/posts'
 
-export function useGetAllPosts(): UseGetAllPostsResult {
+export function useGetPosts(currentPage: number = 1, itemsPerPage: number = 4): UseGetPostsResult {
   const [data, setData] = useState<Post[] | null>(null)
   const [isError, setIsError] = useState(false)
   const [isPending, setIsPending] = useState(true)
@@ -11,7 +11,10 @@ export function useGetAllPosts(): UseGetAllPostsResult {
   useEffect(() => {
     setIsPending(true)
     setIsError(false)
-    fetch(API_URL)
+    
+    const url = `${API_URL}?_page=${currentPage}&_limit=${itemsPerPage}`
+    
+    fetch(url)
       .then((res) => {
         if (!res.ok) throw new Error('Network response was not ok')
         return res.json()
@@ -24,7 +27,7 @@ export function useGetAllPosts(): UseGetAllPostsResult {
         setIsError(true)
         setIsPending(false)
       })
-  }, [])
+  }, [currentPage, itemsPerPage])
 
   return { data, isError, isPending }
 }
