@@ -42,3 +42,35 @@ export const Arrow = (props: React.SVGProps<SVGSVGElement>) => (
     />
   </svg>
 )
+
+export const LeftArrow = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    className={
+      'h-4 w-4 text-primary hover:cursor-pointer dark:text-primary-dark' +
+      (props.className || '')
+    }
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="M15 18l-6-6 6-6" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)
+
+export const RightArrow = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    className={
+      'h-4 w-4 text-primary hover:cursor-pointer dark:text-primary-dark' +
+      (props.className || '')
+    }
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+    {...props}
+  >
+    <path d="M9 18l6-6-6-6" strokeLinecap="round" strokeLinejoin="round" />
+  </svg>
+)

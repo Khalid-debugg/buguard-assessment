@@ -36,3 +36,9 @@ export interface WarningModalProps {
   isOpen: boolean
   onClose: () => void
 }
+export interface PaginationProps {
+  totalData: number
+  itemsPerPage: number
+  currentPage: number
+  onPageChange: (page: number) => void
+}
