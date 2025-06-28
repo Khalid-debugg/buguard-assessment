@@ -33,8 +33,8 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
         <div className="flex justify-center p-8">
           <button
             onClick={onClose}
-            className="rounded-md p-2 transition-colors hover:bg-gray-800"
-            aria-label="Close menu"
+            className="rounded-md p-2 transition-colors hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary"
+            aria-label="Close mobile menu"
           >
             <svg
               className="h-6 w-6 text-primary dark:text-primary-dark"
@@ -42,6 +42,7 @@ const MobileMenu = ({ isOpen, onClose }: MobileMenuProps) => {
               stroke="currentColor"
               strokeWidth="2"
               viewBox="0 0 24 24"
+              aria-hidden="true"
             >
               <path
                 strokeLinecap="round"

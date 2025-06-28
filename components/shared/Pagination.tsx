@@ -34,7 +34,9 @@ const Pagination = ({
       <button
         onClick={() => onPageChange(currentPage - 1)}
         disabled={currentPage === 1}
-        className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-50 dark:hover:bg-gray-800"
+        className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none focus:ring-2 focus:ring-primary dark:hover:bg-gray-800"
+        aria-label={`Go to previous page, page ${currentPage - 1}`}
+        aria-disabled={currentPage === 1}
       >
         <LeftArrow />
         <span>Previous</span>
@@ -48,13 +50,16 @@ const Pagination = ({
               typeof page === 'number' ? onPageChange(page) : undefined
             }
             disabled={typeof page !== 'number'}
-            className={`flex h-8 w-8 items-center justify-center rounded-md text-sm font-medium transition-colors ${
+            className={`flex h-8 w-8 items-center justify-center rounded-md text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-primary ${
               typeof page === 'number' && currentPage === page
                 ? 'bg-[#F9F5FF] text-title dark:bg-[#F9F5FF] dark:text-primary'
                 : typeof page === 'number'
                   ? 'hover:bg-gray-100 dark:hover:bg-gray-800'
                   : 'cursor-default'
             }`}
+            aria-label={typeof page === 'number' ? `Go to page ${page}` : undefined}
+            aria-current={typeof page === 'number' && currentPage === page ? 'page' : undefined}
+            aria-disabled={typeof page !== 'number'}
           >
             {page}
           </button>
@@ -64,7 +69,9 @@ const Pagination = ({
       <button
         onClick={() => onPageChange(currentPage + 1)}
         disabled={currentPage === totalPages}
-        className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-50 dark:hover:bg-gray-800"
+        className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-gray-100 disabled:cursor-not-allowed disabled:opacity-50 focus:outline-none focus:ring-2 focus:ring-primary dark:hover:bg-gray-800"
+        aria-label={`Go to next page, page ${currentPage + 1}`}
+        aria-disabled={currentPage === totalPages}
       >
         <span>Next</span>
         <RightArrow />

@@ -8,7 +8,10 @@ export default function DarkModeToggle() {
   const isDark = theme === 'dark'
   if (!mounted) {
     return (
-      <button className="relative flex h-10 w-24 items-center justify-between rounded-full bg-primary transition-colors duration-300 dark:bg-primary-dark">
+      <button 
+        className="relative flex h-10 w-24 items-center justify-between rounded-full bg-primary transition-colors duration-300 dark:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary"
+        aria-label="Toggle dark mode"
+      >
         <div className="h-6 w-6">
           <Sun />
         </div>
@@ -20,7 +23,8 @@ export default function DarkModeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="relative flex h-10 w-24 items-center justify-between rounded-full bg-primary transition-colors duration-300 dark:bg-primary-dark"
+      className="relative flex h-10 w-24 items-center justify-between rounded-full bg-primary transition-colors duration-300 dark:bg-primary-dark focus:outline-none focus:ring-2 focus:ring-primary"
+      aria-label={`Switch to ${isDark ? 'light' : 'dark'} mode`}
     >
       <div className={`h-6 w-6`}>{isDark ? <Moon /> : <Sun />}</div>
       <div

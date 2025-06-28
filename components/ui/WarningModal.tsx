@@ -22,6 +22,7 @@ const WarningModal: React.FC<WarningModalProps> = ({
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
           >
             <path
               fillRule="evenodd"
@@ -36,7 +37,8 @@ const WarningModal: React.FC<WarningModalProps> = ({
         <div className="flex justify-center">
           <button
             onClick={onClose}
-            className="rounded-md bg-gray-300 px-4 py-2 text-gray-800 transition-colors hover:bg-gray-400 dark:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
+            className="rounded-md bg-gray-300 px-4 py-2 text-gray-800 transition-colors hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-600 dark:text-white dark:hover:bg-gray-700"
+            aria-label="Close warning modal"
           >
             Close
           </button>
