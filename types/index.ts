@@ -31,3 +31,8 @@ export interface ThemeContextType {
   toggleTheme: () => void
   mounted: boolean
 }
+export interface WarningModalProps {
+  title: string
+  isOpen: boolean
+  onClose: () => void
+}
