@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 const BlogPostCard = ({ post }: { post: Post }) => {
   return (
-    <div className="flex h-[476px] w-[384px] flex-col gap-4 overflow-hidden border">
+    <div className="overflow- flex h-[476px] w-[384px] flex-col gap-4">
       <div className="relative aspect-[384/240] w-full">
         <Image
           src={post.imageUrl}
@@ -29,7 +29,7 @@ const BlogPostCard = ({ post }: { post: Post }) => {
         </p>
         <Arrow className="mt-2 h-3 w-3 flex-shrink-0" />
       </Link>
-      <p className="line-clamp-2 text-sm text-secondary md:text-base dark:text-secondary-dark">
+      <p className="text-sm text-secondary sm:line-clamp-2 md:text-base dark:text-secondary-dark">
         {post.body}
       </p>
 
