@@ -11,9 +11,39 @@ const inter = Inter({
   weight: ['400', '500', '600', '700'],
 })
 export const metadata: Metadata = {
-  title: 'The Blog',
-  description: 'A Next.js App using Tailwind',
-}
+  title: {
+    default: 'The Blog',
+    template: '%s | The Blog',
+  },
+  description: 'Explore insights, stories, and updates from The Blog — built with Next.js and Tailwind CSS.',
+  keywords: ['blog', 'Next.js', 'Tailwind CSS', 'web development', 'articles'],
+  metadataBase: new URL('https://buguard-assessment-d2zb2hxhf-khalids-projects-359b9524.vercel.app'),
+  openGraph: {
+    title: 'The Blog',
+    description: 'Explore insights, stories, and updates from The Blog.',
+    url: 'https://buguard-assessment-d2zb2hxhf-khalids-projects-359b9524.vercel.app',
+    siteName: 'The Blog',
+    images: [
+      {
+        url: '/b-letter.jpg', 
+        width: 1200,
+        height: 630,
+        alt: 'The Blog Open Graph Image',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'The Blog',
+    description: 'Explore insights, stories, and updates from The Blog.',
+    images: ['/b-letter.jpg'],
+  },
+  authors: [{ name: 'Khalid Sherif', url: 'https://buguard-assessment-d2zb2hxhf-khalids-projects-359b9524.vercel.app' }],
+  creator: 'Khalid Sherif',
+};
+
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
