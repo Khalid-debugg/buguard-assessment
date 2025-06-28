@@ -70,7 +70,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <StrictMode>
           <ThemeProvider>
             <Navbar />
-            <main className="bg-background p-1 text-primary sm:p-4 md:px-[112px] md:py-[30px] dark:bg-background-dark dark:text-primary-dark">
+            <main className="bg-background p-1 min-h-screen text-primary sm:p-4 md:px-[112px] md:py-[30px] dark:bg-background-dark dark:text-primary-dark">
               {children}
             </main>
           </ThemeProvider>

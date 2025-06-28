@@ -1,3 +1,4 @@
+'use client'
 import { Post, UseGetPostsResult } from '@/types'
 import { useEffect, useState } from 'react'
 
