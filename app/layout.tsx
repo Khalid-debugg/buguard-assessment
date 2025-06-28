@@ -18,6 +18,23 @@ export const metadata: Metadata = {
   description: 'Explore insights, stories, and updates from The Blog — built with Next.js and Tailwind CSS.',
   keywords: ['blog', 'Next.js', 'Tailwind CSS', 'web development', 'articles'],
   metadataBase: new URL('https://buguard-assessment-d2zb2hxhf-khalids-projects-359b9524.vercel.app'),
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: 'your-google-verification-code',
+  },
+  alternates: {
+    canonical: 'https://buguard-assessment-d2zb2hxhf-khalids-projects-359b9524.vercel.app',
+  },
   openGraph: {
     title: 'The Blog',
     description: 'Explore insights, stories, and updates from The Blog.',

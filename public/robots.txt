@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://buguard-assessment-d2zb2hxhf-khalids-projects-359b9524.vercel.app/sitemap.xml 
